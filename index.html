@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASENIK - Wywóz nieczystości płynnych</title>
+    <link rel="icon" type="image/x-icon" href="./images/licon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /*Navigation Bar*/
+        .navbar {
+            width: auto;
+            height: auto;
+        }
+        .navbar-brand > img {
+            width: 80px;
+            height: 80px;
+        }
+        .navbar-nav {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .navbar-light .navbar-nav .nav-item > .nav-link:hover {
+            color: lightgray;
+        }
+
+        .hero-section {
+            position: relative;
+            text-align: center;
+            padding: 150px 0;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .circle-hero {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+        }
+        .circle-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .circle-hero-top-left {
+            top: -50px;
+            left: -50px;
+        }
+        .circle-hero-bottom-right {
+            bottom: -50px;
+            right: -50px;
+        }
+        .hero-section h1 {
+            font-size: 4em;
+            animation: fadeInDown 2s;
+        }
+        .hero-section p {
+            font-size: 1.5em;
+            animation: fadeInUp 2s;
+        }
+        .circle-img {
+           padding: 10px;
+            object-fit: cover; /* Ustaw obraz, aby wypełniał cały kontener */
+        }
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .contact-item i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .contact-item h4 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .contact-item p {
+            margin: 0;
+        }
+
+        .clickable-contact {
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .card-img  img{
+            width: 216px;
+            height: 236px;
+        }
+
+        @media (max-width: 767px) {
+            .circle-hero{
+                opacity: 0.5;
+            }
+            .circle {
+                width: 200px;
+                height: 200px;
+            }
+            .circle-top-left {
+                top: -100px;
+                left: -100px;
+            }
+            .circle-bottom-right {
+                bottom: -100px;
+                right: -100px;
+            }
+            .hero-section h1 {
+                font-size: 2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .btn-primary {
+                font-size: 1em;
+                padding: 8px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" alt="logotype" height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">O Nas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Usługi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+                
+            </ul>
+            <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+                <li>
+                    <a class="nav-link" href="https://www.facebook.com/profile.php?id=61559937843167" target="blank"><i class="fa-brands fa-square-facebook" style="font-size: 36px; color: #0866FF;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 hero-content">
+                    <h1 class="animate__animated">ASENIK - Czystość Płynąca z Profesjonalizmu!</h1>
+                    <p class="animate__animated">Twoje zadowolenie jest naszym priorytetem</p>
+                    <a href="#about" class="btn btn-primary btn-lg animate__animated animate__bounceIn">Dowiedz się więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="circle-hero circle-hero-top-left">
+            <img src="./images/disposal_3.jpg" alt="Top Left Circle-hero Image">
+        </div>
+        <div class="circle-hero circle-hero-bottom-right">
+            <img src="./images/disposal_2.jpg" alt="Bottom Right Circle-hero Image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="animate__animated animate__fadeInLeft">O Nas</h1>
+                    <p class="animate_animated animate__fadeInLeft">
+                        Zajmujemy się profesjonalnym i ekologicznym usuwaniem ścieków, zapewniając czystość i bezpieczeństwo Twojego otoczenia, dbając o najwyższe standardy ochrony środowiska.
+                    </p>
+                    <p class="animate_animated animate__fadeInLeft">
+                        Zwracamy szczególną uwagę na detale i priorytetowo traktujemy zadowolenie klienta.
+                    </p>
+                    <p class="animate_animated animate__fadeInLeft"> Oferujemy możliwość podpisania umowy na realizację stałych zleceń jak i wystawienie faktury na usługę. </p>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <img src="./images/lorry.jpg" class="img-fluid animate__animated animate__fadeInRight rounded-circle circle-img" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section bg-light">
+        <div class="container">
+            <h1 class="text-center animate__animated animate__fadeInUp">Działamy na terenie</h1>
+            <div class="row d-flex">
+                <div class="flex-fill p-2 text-center">
+                    <div class="card animate__animated animate__zoomIn">
+                        <div class="card-body">
+                            <h5 class="card-title">Gminy Zamość</h5>
+                            <p class="card-img"><img src="./images/herb_zamosc.png" alt="herb_zamosc" srcset=""></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-fill p-2 text-center">
+                    <div class="card animate__animated animate__zoomIn">
+                        <div class="card-body">
+                            <h5 class="card-title">Gminy Adamów</h5>
+                            <p class="card-img"><img src="./images/herb_adamow.png" alt="herb_adamow" srcset=""></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-fill p-2 text-center">
+                    <div class="card animate__animated animate__zoomIn">
+                        <div class="card-body">
+                            <h5 class="card-title">Gminy Łabunie</h5>
+                            <p class="card-img"><img src="./images/herb_labunie.png" alt="herb_labunie" srcset=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="flex-fill p-2 text-center">
+                    <div class="card animate__animated animate__zoomIn">
+                        <div class="card-body">
+                            <h5 class="card-title">Gminy Sitno</h5>
+                            <p class="card-img"><img src="./images/herb_sitno.png" alt="herb_sitno" srcset=""></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-fill p-2 text-center">
+                    <div class="card animate__animated animate__zoomIn">
+                        <div class="card-body">
+                            <h5 class="card-title">Miasta Zamość</h5>
+                            <p class="card-img"><img src="./images/herb_miasto_zamosc.png" alt="" srcset=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h1 class="text-center animate__animated animate__fadeInUp">Kontakt</h1>
+            <div class="row">
+                <div class="col-md-4 contact-item">
+                    <i class="fas fa-map-marker-alt clickable-contact "onclick="window.location.href='https://maps.app.goo.gl/CWwHi9pZYEv1WogD9'"></i>
+                    <h4>Adres</h4>
+                    <a href="https://maps.app.goo.gl/CWwHi9pZYEv1WogD9">Tu nas znajdziesz</a>
+                    <p class="clickable-contact" onclick="window.location.href='https://maps.app.goo.gl/CWwHi9pZYEv1WogD9'">Lipsko Polesie 23B</p>
+                    <p class="clickable-contact"  onclick="window.location.href='https://maps.app.goo.gl/CWwHi9pZYEv1WogD9'">22-400</p>
+                </div>
+                <div class="col-md-4 contact-item">
+                    <i class="fas fa-envelope clickable-contact" onclick="window.location.href='mailto:asenik@op.pl'"></i>
+                    <h4>E-mail</h4>
+                    <a href="mailto:asenik@op.pl">Napisz do nas</a>
+                    <p class="clickable-contact" onclick="window.location.href='mailto:asenik@op.pl'">asenik@op.pl</p>
+                </div>
+                <div class="col-md-4 contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Telefon</h4>
+                    <a href="tel:+48 501 920 848">Zadzwoń</a>
+                    <p>+48 501 920 848</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <p>&copy; 2024 ASENIK. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Animate on Scroll (AOS) Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+</body>
+</html>
